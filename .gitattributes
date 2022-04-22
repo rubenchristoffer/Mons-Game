@@ -1,0 +1,111 @@
+## Unity ##
+
+*.cs diff=csharp text
+*.uxml text
+*.uss diff=css text
+*.cginc text
+*.shader text
+
+*.mat merge=unityyamlmerge eol=lf
+*.anim merge=unityyamlmerge eol=lf
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.preset merge=unityyamlmerge eol=lf
+*.physicsMaterial2D merge=unityyamlmerge eol=lf
+*.physicsMaterial merge=unityyamlmerge eol=lf
+*.meta merge=unityyamlmerge eol=lf
+*.controller merge=unityyamlmerge eol=lf
+*.terrainlayer merge=unityyamlmerge eol=lf
+*.asmdef merge=unityyamlmerge eol=lf
+
+# Image formats
+*.psd -text
+*.jpg -text
+*.png -text
+*.gif -text
+*.bmp -text
+*.tga -text
+*.tiff -text
+*.tif -text
+*.iff -text
+*.pict -text
+*.dds -text
+*.xcf -text
+*.kra -text
+*.exr -text
+*.hdr -text
+
+#font formats
+*.ttf -text
+*.TTF -text
+*.otf -text
+*.woff -text
+*.eot -text
+
+# Audio formats
+*.mp3 -text
+*.ogg -text
+*.wav -text
+*.aiff -text
+*.aif -text
+*.mod -text
+*.it -text
+*.s3m -text
+*.xm -text
+*.a -text
+
+# Video formats
+*.mov -text
+*.avi -text
+*.asf -text
+*.mpg -text
+*.mpeg -text
+*.mp4 -text
+
+# 3D formats
+*.fbx -text
+*.obj -text
+*.max -text
+*.blend -text
+*.dae -text
+*.mb -text
+*.ma -text
+*.3ds -text
+*.dfx -text
+*.c4d -text
+*.lwo -text
+*.lwo2 -text
+*.abc -text
+*.3dm -text
+
+# 3D formats additives
+*.mtl text
+
+# Build
+*.dll -text
+*.pdb -text
+*.mdb -text
+
+# Packaging
+*.zip -text
+*.7z -text
+*.gz -text
+*.rar -text
+*.tar -text
+*.tgz -text
+*.aar -text
+*.jar -text
+
+# keystore
+*.keystore -text
+
+# ETC
+*.unitypackage -text
+*.rns -text
+*.reason -text
+*.lxo -text
+*.pdf -text
+
+# Other
+*.so -text
+*.db -text

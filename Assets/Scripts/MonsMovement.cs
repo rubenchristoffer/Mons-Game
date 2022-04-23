@@ -10,8 +10,43 @@ public class MonsMovement : MonoBehaviour {
 	[SerializeField]
 	private LevelData _levelData;
 
+	[Header("Jumping")]
+	[SerializeField]
+	private float jumpResetTime = 0.5f;
+	[SerializeField]
+	private float jumpSpeed = 5f;
+
+	[Header("Ground Detection")]
+	[SerializeField]
+	private float groundedOffset = 0.2f;
+	[SerializeField]
+	private float groundedRayLength = 0.25f;
+
+	private IInput _input;
+
+	private bool grounded;
+	private float jumpTimer;
+
+	private void Awake () {
+		_input = GetComponentInParent<IInput>();
+	}
+
 	private void FixedUpdate () {
-		_rigidbody.velocity = Vector3.right * _levelData.currentSpeed;
+		Vector3 targetVelocity = _rigidbody.velocity;
+		
+		grounded = Physics.Raycast(transform.position + Vector3.up * groundedOffset, Vector3.down, groundedRayLength);
+
+		if (jumpTimer > 0f) jumpTimer -= Time.fixedDeltaTime;
+
+		targetVelocity.x = _levelData.currentSpeed;
+
+		if (_input.jump && jumpTimer <= 0f && grounded) {
+			targetVelocity.y = jumpSpeed;
+
+			jumpTimer = jumpResetTime;
+		}
+
+		_rigidbody.velocity = targetVelocity;
 	}
 
 }

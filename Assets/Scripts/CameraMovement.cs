@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour {
 	private Rigidbody _rigidbody;
 	[SerializeField]
 	private LevelData _levelData;
-	
+
 	void FixedUpdate () {
 		_rigidbody.velocity = Vector3.right * _levelData.currentSpeed;
 	}

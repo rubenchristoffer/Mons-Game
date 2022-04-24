@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &91515375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 91515377}
+  - component: {fileID: 91515376}
+  m_Layer: 0
+  m_Name: LevelState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &91515376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91515375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96fcd5769e6ad530a53a25694965774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerTracker: {fileID: 628657888}
+  _levelData: {fileID: 11400000, guid: fecb1222448e3119cbd579bffd17f2db, type: 2}
+--- !u!4 &91515377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91515375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.1506257, y: 3.7106018, z: -5.468893}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614546753
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +358,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &628657884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +412,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 185d507d84ba3e44e9a011b3f5532ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &628657888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628657882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7089e23ea493be9cdbae4afb3f777d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &859565252
@@ -625,8 +682,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _followTarget: {fileID: 1321356184}
-  _rigidbody: {fileID: 1640726279}
   _levelData: {fileID: 11400000, guid: fecb1222448e3119cbd579bffd17f2db, type: 2}
+  _maxFollowSpeed: 2
 --- !u!54 &1640726279
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -15,6 +15,10 @@ public class MonsEntityEditor : Editor {
 		
 		GUILayout.Label($"Lives: {script.lives}");
 		GUILayout.Label($"Is Dead: {script.isDead}");
+
+		if (GUILayout.Button("Hurt")) {
+			script.Hurt();
+		}
 	}
 
 }

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5522773242365805153}
   - component: {fileID: 8555775148897147955}
   - component: {fileID: 1920528314875024213}
-  m_Layer: 0
-  m_Name: Collider
+  m_Layer: 6
+  m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

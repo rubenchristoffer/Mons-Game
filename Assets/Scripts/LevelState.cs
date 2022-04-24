@@ -6,16 +6,19 @@ using UnityEngine.Events;
 public class LevelState : MonoBehaviour {
 	
 	public readonly UnityEvent eventFinishedLevel = new UnityEvent();
-	
-	[SerializeField]
-	private DistanceTracker _playerTracker;
 
 	[SerializeField]
 	private LevelData _levelData;
 	
+	private DistanceTracker _playerTracker;
+	
 	public float distanceToFinish { get; private set; }
 	public bool hasReachedFinish { get; private set; }
 
+	void Awake () {
+		_playerTracker = GameObject.FindWithTag(Tags.PLAYER).GetComponent<DistanceTracker>();
+	}
+	
 	void Update () {
 		distanceToFinish = _levelData.finishDistance - _playerTracker.horizontalDistanceTravelled;
 

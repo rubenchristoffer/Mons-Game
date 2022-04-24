@@ -11,6 +11,8 @@ public class DistanceTrackerEditor : Editor {
 
 		var script = (DistanceTracker) target;
 		
+		if (!Application.isPlaying) return;
+		
 		GUILayout.Label($"Horizontal Distance Travelled: {script.horizontalDistanceTravelled}");
 	}
 

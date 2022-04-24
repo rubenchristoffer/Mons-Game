@@ -38,7 +38,7 @@ public class MonsMovement : MonoBehaviour {
 
 		if (jumpTimer > 0f) jumpTimer -= Time.fixedDeltaTime;
 
-		targetVelocity.x = _levelData.currentSpeed;
+		targetVelocity.x = _levelData.movementSpeed;
 
 		if (_input.jump && jumpTimer <= 0f && grounded) {
 			targetVelocity.y = jumpSpeed;

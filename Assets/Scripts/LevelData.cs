@@ -6,8 +6,12 @@ using UnityEngine;
 public class LevelData : ScriptableObject {
 
 	[SerializeField]
-	private float _currentSpeed = 1f;
+	private float _movementSpeed = 1f;
 
-	public float currentSpeed => _currentSpeed;
+	[SerializeField]
+	private float _finishDistance;
+
+	public float movementSpeed => _movementSpeed;
+	public float finishDistance => _finishDistance;
 
 }

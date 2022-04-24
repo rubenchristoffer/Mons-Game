@@ -24,10 +24,10 @@ public class CameraMovement : MonoBehaviour {
 		if (!_obstacleAvoider.isCollidingWithObstacle) {
 			_targetPosition = new Vector3(_followTarget.position.x, transform.position.y, transform.position.z);
 		} else {
-			_targetPosition += Vector3.right*_levelData.currentSpeed * Time.deltaTime;
+			_targetPosition += Vector3.right*_levelData.movementSpeed * Time.deltaTime;
 		}
 
-		transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _maxFollowSpeed * Time.deltaTime);
+		transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _maxFollowSpeed * _levelData.movementSpeed * Time.deltaTime);
 	}
 
 }

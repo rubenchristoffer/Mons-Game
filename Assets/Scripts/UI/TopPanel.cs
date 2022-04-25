@@ -34,7 +34,7 @@ public class TopPanel : MonoBehaviour {
 	}
 
 	private void DistanceLeftText () {
-		_distanceLeftText.text = $"Distance Left: {_levelState.distanceToFinish:0.0}m";
+		_distanceLeftText.text = $"{_levelState.distanceToFinish:0.0}m to go";
 
 		if (_levelState.hasReachedFinish) {
 			_distanceLeftTextAnimator.enabled = true;

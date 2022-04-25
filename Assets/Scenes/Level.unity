@@ -1694,6 +1694,10 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1773460386665745529, guid: 05d37f5aa1b43dd5b9fdc3c61cce88e6, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1773460386665745530, guid: 05d37f5aa1b43dd5b9fdc3c61cce88e6, type: 3}
       propertyPath: m_Name
       value: Canvas

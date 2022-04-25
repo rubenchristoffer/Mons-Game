@@ -19,6 +19,10 @@ public class MonsEntityEditor : Editor {
 		if (GUILayout.Button("Hurt")) {
 			script.Hurt();
 		}
+
+		if (GUILayout.Button("Heal")) {
+			script.Heal();
+		}
 	}
 
 }

@@ -29,4 +29,8 @@ public class MonsEntity : MonoBehaviour {
 		}
 	}
 
+	public void Heal () {
+		if (lives < MAX_LIVES) lives++;
+	}
+
 }

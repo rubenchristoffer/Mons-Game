@@ -12,9 +12,13 @@ public class Hazard : MonoBehaviour {
 	
 	private void OnTriggerEnter (Collider other) {
 		if (Time.time - _lastCollisionTime > _hurtResetTime) {
-			_lastCollisionTime = Time.time;
+			MonsEntity entity = other.GetComponentInParent<MonsEntity>();
 			
-			other.GetComponentInParent<MonsEntity>()?.Hurt();
+			if (entity != null) {
+				_lastCollisionTime = Time.time;
+				
+				entity.Hurt();
+			}
 		}
 	}
 

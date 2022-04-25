@@ -21,6 +21,8 @@ public class MonsMovement : MonoBehaviour {
 	private float groundedOffset = 0.2f;
 	[SerializeField]
 	private float groundedRayLength = 0.25f;
+	[SerializeField]
+	private LayerMask groundedLayerMask;
 
 	private IInput _input;
 
@@ -34,7 +36,7 @@ public class MonsMovement : MonoBehaviour {
 	private void FixedUpdate () {
 		Vector3 targetVelocity = _rigidbody.velocity;
 		
-		grounded = Physics.Raycast(transform.position + Vector3.up * groundedOffset, Vector3.down, groundedRayLength);
+		grounded = Physics.Raycast(transform.position + Vector3.up * groundedOffset, Vector3.down, groundedRayLength, groundedLayerMask);
 
 		if (jumpTimer > 0f) jumpTimer -= Time.fixedDeltaTime;
 

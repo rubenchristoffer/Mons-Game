@@ -24,9 +24,9 @@ public class MonsMovement : MonoBehaviour {
 	[SerializeField]
 	private LayerMask groundedLayerMask;
 
+	public bool isGrounded { get; private set; }
+	
 	private IInput _input;
-
-	private bool grounded;
 	private float jumpTimer;
 
 	private void Awake () {
@@ -36,13 +36,13 @@ public class MonsMovement : MonoBehaviour {
 	private void FixedUpdate () {
 		Vector3 targetVelocity = _rigidbody.velocity;
 		
-		grounded = Physics.Raycast(transform.position + Vector3.up * groundedOffset, Vector3.down, groundedRayLength, groundedLayerMask);
+		isGrounded = Physics.Raycast(transform.position + Vector3.up * groundedOffset, Vector3.down, groundedRayLength, groundedLayerMask);
 
 		if (jumpTimer > 0f) jumpTimer -= Time.fixedDeltaTime;
 
 		targetVelocity.x = _levelData.movementSpeed;
 
-		if (_input.jump && jumpTimer <= 0f && grounded) {
+		if (_input.jump && jumpTimer <= 0f && isGrounded) {
 			targetVelocity.y = jumpSpeed;
 
 			jumpTimer = jumpResetTime;

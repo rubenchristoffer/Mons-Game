@@ -712,8 +712,8 @@ MonoBehaviour:
 
     Better luck next time!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
+  m_sharedMaterial: {fileID: 3753600330983091605, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -877,8 +877,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Oopsie...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
+  m_sharedMaterial: {fileID: 3753600330983091605, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1212,8 +1212,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: I will try again!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
+  m_sharedMaterial: {fileID: 3753600330983091605, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2089,8 +2089,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Go to Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
+  m_sharedMaterial: {fileID: 3753600330983091605, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2586,8 +2586,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1773460385339691758, guid: 05d37f5aa1b43dd5b9fdc3c61cce88e6, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
+    - target: {fileID: 1773460385339691758, guid: 05d37f5aa1b43dd5b9fdc3c61cce88e6, type: 3}
       propertyPath: m_fontStyle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773460385339691758, guid: 05d37f5aa1b43dd5b9fdc3c61cce88e6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3753600330983091605, guid: 5744ea4772824733f81508aaba9166ae, type: 2}
+    - target: {fileID: 1773460385339691758, guid: 05d37f5aa1b43dd5b9fdc3c61cce88e6, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: 2425
       objectReference: {fileID: 0}
     - target: {fileID: 1773460385526067184, guid: 05d37f5aa1b43dd5b9fdc3c61cce88e6, type: 3}
       propertyPath: _levelState

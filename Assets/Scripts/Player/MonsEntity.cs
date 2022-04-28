@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MonsEntity : MonoBehaviour {
 
-	public const int MAX_LIVES = 9;
+	public const int MAX_LIVES = 3;
 	public const float RESPAWN_HEIGHT = -10f;
 
 	public readonly UnityEvent eventOnHurt = new UnityEvent();

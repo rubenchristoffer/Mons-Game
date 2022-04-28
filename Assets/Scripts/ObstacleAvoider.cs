@@ -10,13 +10,17 @@ public class ObstacleAvoider : MonoBehaviour, IObstacleAvoider {
 	private int collidingObstacles;
 	
 	private void OnCollisionEnter (Collision collision) {
-		if (collision.transform.GetComponentInParent<Obstacle>() != null) {
+		Obstacle obstacle = collision.transform.GetComponentInParent<Obstacle>();
+		
+		if (obstacle != null && obstacle.enabled) {
 			collidingObstacles++;
 		}
 	}
 
 	private void OnCollisionExit (Collision collision) {
-		if (collision.transform.GetComponentInParent<Obstacle>() != null) {
+		Obstacle obstacle = collision.transform.GetComponentInParent<Obstacle>();
+		
+		if (obstacle != null && obstacle.enabled) {
 			collidingObstacles--;
 		}
 	}

@@ -13,7 +13,7 @@ public class DistanceTrackerEditor : Editor {
 		
 		if (!Application.isPlaying) return;
 		
-		GUILayout.Label($"Horizontal Distance Travelled: {script.horizontalDistanceTravelled}");
+		GUILayout.Label($"Horizontal Distance Travelled: {script.GetHorizontalDistanceTravelled()}");
 	}
 
 }

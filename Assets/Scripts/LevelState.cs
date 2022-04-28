@@ -8,27 +8,17 @@ public class LevelState : MonoBehaviour {
 
 	public readonly UnityEvent eventFinishedLevel = new UnityEvent();
 	public readonly UnityEvent eventFailedLevel = new UnityEvent();
-	public readonly UnityEvent<Checkpoint> eventReachedCheckpoint = new UnityEvent<Checkpoint>();
 
 	[SerializeField]
 	private LevelData _levelData;
-	
+
 	private DistanceTracker _playerTracker;
 	private MonsEntity _entity;
 	private Transform _camera;
-	private Checkpoint _checkpoint;
 
 	public float distanceToFinish { get; private set; }
 	public bool hasReachedFinish { get; private set; }
 	public bool hasFailed { get; private set; }
-
-	public Checkpoint checkpoint {
-		get => _checkpoint;
-		set {
-			_checkpoint = value;
-			eventReachedCheckpoint.Invoke(_checkpoint);
-		}
-	}
 
 	void Awake () {
 		_playerTracker = GameObject.FindWithTag(Tags.PLAYER).GetComponent<DistanceTracker>();
@@ -39,7 +29,7 @@ public class LevelState : MonoBehaviour {
 	void Update () {
 		if (hasReachedFinish || hasFailed) return;
 		
-		distanceToFinish = _levelData.finishDistance - _playerTracker.horizontalDistanceTravelled;
+		distanceToFinish = _levelData.finishDistance - _playerTracker.GetHorizontalDistanceTravelled();
 
 		if (distanceToFinish < 0) distanceToFinish = 0;
 		
@@ -55,5 +45,5 @@ public class LevelState : MonoBehaviour {
 			}
 		}
 	}
-	
+
 }

@@ -7,16 +7,26 @@ public class Checkpoint : MonoBehaviour {
 
 	[SerializeField]
 	private Animator _animator;
+	[SerializeField]
+	private Transform _spawnPosition;
+
+	private CameraMovement _camera;
+	private DeathData _deathData;
 	
-	private LevelState _levelState;
+	public Vector3 spawnPosition => _spawnPosition.position;
 
-	private void Awake () {
-		_levelState = FindObjectOfType<LevelState>();
+	void Start () {
+		_deathData = FindObjectOfType<DeathData>();
 	}
-
+	
 	private void OnTriggerEnter (Collider other) {
-		if (other.GetComponentInParent<MonsEntity>() != null) {
-			_levelState.checkpoint = this;
+		MonsEntity entity = other.GetComponentInParent<MonsEntity>();
+		
+		if (entity != null) {
+			_deathData.respawn = true;
+			_deathData.respawnPosition = spawnPosition;
+			_deathData.lastCheckpointPlayerLives = entity.lives;
+			
 			_animator.SetTrigger("ReachedCheckpoint");
 		}
 	}

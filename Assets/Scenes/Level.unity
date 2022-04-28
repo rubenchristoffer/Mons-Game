@@ -525,6 +525,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4742433357983330940, guid: 3840fb654695c72bf823d66848f134e3, type: 3}
   m_PrefabInstance: {fileID: 1662453723}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &763904340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 763904342}
+  - component: {fileID: 763904341}
+  m_Layer: 0
+  m_Name: DeathData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &763904341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763904340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea8a922409084841ba53afa44673f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &763904342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763904340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 52.22321, y: -5.686286, z: 13.79034}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &904722638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1750,18 +1793,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 508109909}
     m_Modifications:
-    - target: {fileID: 4670903657702396818, guid: 27a7fbff2ee27ea199d1f36c8b563ba5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670903657702396818, guid: 27a7fbff2ee27ea199d1f36c8b563ba5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670903657702396818, guid: 27a7fbff2ee27ea199d1f36c8b563ba5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5261586748002401168, guid: 27a7fbff2ee27ea199d1f36c8b563ba5, type: 3}
       propertyPath: m_Name
       value: Checkpoint

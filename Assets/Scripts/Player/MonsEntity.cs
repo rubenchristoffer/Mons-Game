@@ -6,24 +6,28 @@ using UnityEngine.Events;
 public class MonsEntity : MonoBehaviour {
 
 	public const int MAX_LIVES = 9;
+	public const float RESPAWN_HEIGHT = -10f;
 
 	public readonly UnityEvent eventOnHurt = new UnityEvent();
 	public readonly UnityEvent eventOnDeath = new UnityEvent();
 
-	public int lives { get; private set; }
+	public int lives { get; private set; } = MAX_LIVES;
 	public bool isDead { get; private set; }
-	
-	void Start () {
-		lives = MAX_LIVES;
+
+	void Update () {
+		if (transform.position.y < RESPAWN_HEIGHT) {
+			Hurt(lives);
+		}
 	}
 
-	public void Hurt () {
-		if (lives <= 0) return;
+	public void Hurt (int damage = 1) {
+		if (isDead) return;
 		
-		lives--;
+		lives -= damage;
 		eventOnHurt.Invoke();
 
-		if (lives == 0 && !isDead) {
+		if (lives <= 0 && !isDead) {
+			lives = 0;
 			isDead = true;
 			eventOnDeath.Invoke();
 		}
@@ -31,6 +35,11 @@ public class MonsEntity : MonoBehaviour {
 
 	public void Heal () {
 		if (lives < MAX_LIVES) lives++;
+	}
+
+	public void Respawn (int livesToRespawnWith) {
+		lives = livesToRespawnWith;
+		isDead = false;
 	}
 
 }

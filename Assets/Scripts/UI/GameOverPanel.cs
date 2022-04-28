@@ -18,7 +18,7 @@ public class GameOverPanel : MonoBehaviour {
 	}
 	
 	void Awake () {
-		Object.FindObjectOfType<LevelState>().eventFailedLevel.AddListener(LevelState_OnFailedLevel);
+		FindObjectOfType<LevelState>().eventFailedLevel.AddListener(LevelState_OnFailedLevel);
 		
 		gameObject.SetActive(false);
 	}

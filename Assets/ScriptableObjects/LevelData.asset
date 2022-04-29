@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LevelData
   m_EditorClassIdentifier: 
   _movementSpeed: 3
-  _finishDistance: 5
+  _finishDistance: 150
   _cameraFailDistance: 6

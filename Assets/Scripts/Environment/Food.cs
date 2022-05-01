@@ -7,12 +7,13 @@ public class Food : MonoBehaviour {
 
 	[SerializeField]
 	private GameObject topObject;
-	
-	private void OnTriggerEnter (Collider other) {
-		MonsEntity entity = other.GetComponentInParent<MonsEntity>();
 
-		if (entity != null) {
-			entity.Heal();
+	private void OnTriggerEnter (Collider other) {
+		FoodCollectionEvents foodCollectionEvents = other.GetComponentInParent<FoodCollectionEvents>();
+
+		if (foodCollectionEvents != null) {
+			foodCollectionEvents.eventOnFoodCollected.Invoke(this);
+
 			Destroy(topObject);
 		}
 	}

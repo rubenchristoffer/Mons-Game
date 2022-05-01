@@ -11,9 +11,20 @@ public class MonsEntity : MonoBehaviour {
 	public readonly UnityEvent eventOnHurt = new UnityEvent();
 	public readonly UnityEvent eventOnDeath = new UnityEvent();
 
+	[SerializeField]
+	private FoodCollectionEvents _foodCollectionEvents;
+	
 	public int lives { get; private set; } = MAX_LIVES;
 	public bool isDead { get; private set; }
 
+	void Awake () {
+		_foodCollectionEvents.eventOnFoodCollected.AddListener(FoodCollectionEvents_OnFoodCollected);
+	}
+
+	void FoodCollectionEvents_OnFoodCollected (Food food) {
+		Heal();
+	}
+	
 	void Update () {
 		if (transform.position.y < RESPAWN_HEIGHT) {
 			Hurt(lives);

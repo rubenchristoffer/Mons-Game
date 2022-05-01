@@ -10,6 +10,9 @@ public class Checkpoint : MonoBehaviour {
 	[SerializeField]
 	private Transform _spawnPosition;
 
+	[SerializeField]
+	private AudioSource _reachedCheckpointAudio;
+	
 	private CameraMovement _camera;
 	private DeathData _deathData;
 	
@@ -28,6 +31,7 @@ public class Checkpoint : MonoBehaviour {
 			_deathData.lastCheckpointPlayerLives = entity.lives;
 			
 			_animator.SetTrigger("ReachedCheckpoint");
+			_reachedCheckpointAudio.Play();
 		}
 	}
 

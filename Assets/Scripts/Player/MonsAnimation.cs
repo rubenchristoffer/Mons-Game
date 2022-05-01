@@ -6,11 +6,14 @@ public class MonsAnimation : MonoBehaviour {
 
 	[SerializeField]
 	private Animator _animator;
-	[SerializeField]
-	private MonsMovement _movement;
 
-	void Update () {
-		_animator.SetBool("isGrounded", _movement.isGrounded);
+	[SerializeField]
+	private MonsEntity _entity;
+
+	void Awake () {
+		_entity.eventOnHurt.AddListener(() => {
+			_animator.SetTrigger("Hurt");
+		});
 	}
 	
 }

@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 484940722910790510}
   - component: {fileID: 435583995}
   - component: {fileID: 5574061569860185695}
+  - component: {fileID: 1979613422}
   m_Layer: 0
   m_Name: Mons
   m_TagString: Player
@@ -248,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 288920172}
-  _movement: {fileID: 484940722910790483}
+  _entity: {fileID: 484940722910790510}
 --- !u!114 &5574061569860185695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +262,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17dd0b97fbd38f9b941e1da5944291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1979613422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755393991523253766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfe3ae9aa74ee5099c3ef5c5440bb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _monsEntity: {fileID: 484940722910790510}
+  _modelRoot: {fileID: 798183504943923739}
 --- !u!95 &288920172
 Animator:
   serializedVersion: 3

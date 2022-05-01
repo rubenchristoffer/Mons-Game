@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathData : MonoBehaviour {
 	
@@ -14,10 +16,21 @@ public class DeathData : MonoBehaviour {
 		if (I == null) {
 			I = this;
 			DontDestroyOnLoad(this);
+			SceneManager.sceneLoaded += SceneManager_OnSceneLoaded;
 		}
 
 		if (I != this) {
 			I.Respawn();
+		}
+	}
+
+	private void OnDestroy () {
+		SceneManager.sceneLoaded -= SceneManager_OnSceneLoaded;
+	}
+
+	private void SceneManager_OnSceneLoaded (Scene scene, LoadSceneMode loadSceneMode) {
+		if (scene.name.Equals(Scenes.MAIN_MENU)) {
+			Destroy(gameObject);
 		}
 	}
 

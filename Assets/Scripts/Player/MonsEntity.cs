@@ -24,12 +24,13 @@ public class MonsEntity : MonoBehaviour {
 		if (isDead) return;
 		
 		lives -= damage;
-		eventOnHurt.Invoke();
 
 		if (lives <= 0 && !isDead) {
 			lives = 0;
 			isDead = true;
 			eventOnDeath.Invoke();
+		} else {
+			eventOnHurt.Invoke();
 		}
 	}
 

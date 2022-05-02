@@ -10,7 +10,12 @@ Get Mons home safely!
 Controls are very simple!   
 There is only 1 in fact: Press Spacebar to jump.
 
-## Download 🌎
+## Play Online 🌎
+You can play the latest version online here: https://copythis.link/game/Mons.  
+Press the escape key to disable fullscreen mode.  
+If encountering performance problems, it is recommended to try another web browser or download the game instead.
+
+## Download ⏬
 1. Find and download the desired version and target platform under [releases](https://github.com/rubenchristoffer/Mons-Game/releases).
 1. Unzip compressed archive.
 1. Run the Mons executable. If on Windows, Windows Defender might warn against 'potential threat' because the executable is not signed. To start the game, click on ```More info -> Run anyway```. 

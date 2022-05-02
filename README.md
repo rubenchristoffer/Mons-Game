@@ -10,6 +10,11 @@ Get Mons home safely!
 Controls are very simple!   
 There is only 1 in fact: Press Spacebar to jump.
 
+## Download 🌎
+1. Find and download the desired version and target platform under [releases](https://github.com/rubenchristoffer/Mons-Game/releases).
+1. Unzip compressed archive.
+1. Run the Mons executable. If on Windows, Windows Defender might warn against 'potential threat' because the executable is not signed. To start the game, click on ```More Info -> Run Anyway```. 
+
 ## Tools 🔧
 Game Engine: Unity   
 Modelling Software: Blender  

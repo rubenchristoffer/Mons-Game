@@ -13,7 +13,8 @@ There is only 1 in fact: Press Spacebar to jump.
 ## Play Online 🌎
 You can play the latest version online here: https://copythis.link/game/Mons.  
 Press the escape key to disable fullscreen mode.  
-If encountering performance problems, it is recommended to try another web browser or download the game instead.
+If encountering performance or audio problems, it is recommended to try another web browser or download the game instead.  
+The game was working in Firefox at the time of writing. 
 
 ## Download ⏬
 1. Find and download the desired version and target platform under [releases](https://github.com/rubenchristoffer/Mons-Game/releases).

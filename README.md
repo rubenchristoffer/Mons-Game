@@ -1,5 +1,5 @@
 # Mons 🐱
-Mons is a simple 3D platformer created in 10 days (⚡ ~20 clocked hours ⚡) 
+Mons is a simple 3D platformer created in 10 days (~20 clocked hours) 
 
 ![icon](https://user-images.githubusercontent.com/54401232/166167932-91d71dd7-68c6-479e-bd39-e51cc03fd275.png)
 
